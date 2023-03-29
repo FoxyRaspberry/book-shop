@@ -1,0 +1,80 @@
+:root {
+  --button-height: 52px;
+  --button-background-color: #a3eefe;
+  --button-hover-color: #D9D9D9;
+  --color-text: #3D3D3D;
+}
+
+.book-shop-button {
+  padding: 0px 30px;
+  height: var(--button-height);
+  background: var(--button-background-color);
+  border-radius: 100px;
+  border: var(--button-background-color);
+  cursor: pointer;
+
+  font-family: 'Gelasio';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--color-text);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.book-shop-button:hover {
+  background: var(--button-hover-color);
+}
+
+.book-shop-button-close {
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--button-background-color);
+  border-radius: 100px;
+  cursor: pointer;
+  background: var(--button-secondary-color);
+
+  font-family: 'Gelasio';
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+}
+
+.book-shop-button-close:hover {
+  background: var(--button-hover-color);
+  border: 2px solid var(--button-hover-color);
+}
+
+.book-shop-header-two,
+.book-shop-header-three,
+.book-shop-header-four,
+.book-shop-header-five {
+  font-family: 'Gelasio';
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.book-shop-header-two {
+  font-size: 44px;
+  line-height: 130%;
+}
+
+.book-shop-header-three {
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.book-shop-header-four {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.book-shop-header-five {
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
