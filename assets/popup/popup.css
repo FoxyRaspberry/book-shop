@@ -1,0 +1,44 @@
+.book-shop-popup__blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e29e94b5;
+}
+
+.book-shop-popup__section {
+  position: relative;
+  top: 100px;
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  border-radius: 18px;
+  background: #0C8C95;
+}
+
+.book-shop-popup__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.book-shop-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-shop-popup__header-book-title {
+  color: #D7CEC9;
+  margin: 35px auto 0;
+}
+
+.book-shop-popup-description {
+  margin: auto;
+  width: 400px;
+}
+
+.book-shop-popup__header-book-abstract {
+  color: #D7CEC9;
+}
