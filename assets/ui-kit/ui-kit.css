@@ -3,6 +3,12 @@
   --button-background-color: #a3eefe;
   --button-hover-color: #D9D9D9;
   --color-text: #3D3D3D;
+
+  --color-one: #A6191F;
+  --color-two: #E29F94;
+  --color-three: #D7CEC9;
+  --color-four: #0C8C95;
+  --color-five: #0A5568;
 }
 
 .book-shop-button {
@@ -30,7 +36,7 @@
   padding: 0;
   width: 35px;
   height: 35px;
-  border: 2px solid var(--button-background-color);
+  border: 2px solid var(--color-three);
   border-radius: 100px;
   cursor: pointer;
   background: var(--button-secondary-color);
@@ -43,8 +49,8 @@
 }
 
 .book-shop-button-close:hover {
-  background: var(--button-hover-color);
-  border: 2px solid var(--button-hover-color);
+  background: var(--color-three);
+  border: 2px solid var(--color-three);
 }
 
 .book-shop-header-two,
@@ -54,6 +60,7 @@
   font-family: 'Gelasio';
   font-weight: 400;
   color: var(--color-text);
+  margin: 0;
 }
 
 .book-shop-header-two {
@@ -62,7 +69,7 @@
 }
 
 .book-shop-header-three {
-  font-size: 35px;
+  font-size: 24px;
   line-height: 130%;
   letter-spacing: 0.06em;
 }
