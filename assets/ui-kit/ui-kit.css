@@ -1,7 +1,7 @@
 :root {
   --button-height: 52px;
-  --button-background-color: #a3eefe;
-  --button-hover-color: #D9D9D9;
+  --button-background-color: #D7CEC9;
+  --button-hover-color: #0C8C95;
   --color-text: #3D3D3D;
 
   --color-one: #A6191F;
@@ -30,6 +30,7 @@
 
 .book-shop-button:hover {
   background: var(--button-hover-color);
+  color: var(--color-three);
 }
 
 .book-shop-button-close {
