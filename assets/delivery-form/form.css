@@ -1,0 +1,97 @@
+.delivery__section {
+  background: linear-gradient(to top, #3a6186, #89253e);
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.wrapper__section {
+  width: 1200px;
+  margin: auto;
+}
+
+.delivery__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.delivery__product-details {
+  background: var(--color-three);
+  border-radius: 5px;
+}
+
+.delivery__product {
+  color: var(--color-five);
+}
+
+.delivery__header {
+  color: var(--color-three);
+}
+
+.delivery__form-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+}
+
+.delivery__form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.delivery__label,
+.delivery__label-address,
+.delivery__label-date,
+.delivery__payment-method,
+.delivery__selected-products {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  color: var(--color-three);
+}
+
+.delivery__label-address {
+  gap: 15px;
+}
+
+.delivery__label-payment,
+.delivery__extra-gifts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+}
+
+#paymentMethod,
+#niceGifts {
+  width: 18px;
+  margin: 0 5px 0 3px;
+}
+
+.delivery__input {
+  width: 500px;
+  height: 40px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: var(--color-three);
+  background-color: var(--color-three);
+  color: var(--color-five);
+}
+
+.delivery__button {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.delivery__button-complete:hover,
+.delivery__button-reset:hover {
+  background-color: var(--color-three);
+  border: 2px solid #608fdbac;
+  color: var(--color-five);
+}

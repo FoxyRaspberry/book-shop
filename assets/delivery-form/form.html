@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery form</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Gelasio&display=swap" rel="stylesheet">
+  <link href="../reset.css" rel="stylesheet">
+  <link href="../ui-kit/ui-kit.css" rel="stylesheet">
+  <link href="form.css" rel="stylesheet">
+  <script src="form.js"></script>
+</head>
+<body>
+  <section class="delivery__section">
+    <div class="wrapper__section">
+      <div class="delivery__content-container">
+        <div class="delivery__header-container">
+          <h2 class="book-shop-header-two delivery__header">Making an order</h2>
+        </div>
+        <div class="delivery__form-wrapper">
+          <div class="book-shop-header-two delivery__selected-products">My choice
+            <div class="delivery__product-details">
+              <div class="delivery__product-title">
+                <div class="book-shop-header-three delivery__product">Programming JavaScript Applications</div>
+              </div>
+              <div class="delivery__product-price">
+                <div class="book-shop-header-five delivery__product">Price: 19</div>
+              </div>
+            </div>
+          </div>
+          <form class="delivery__form">
+            <label class="book-shop-header-two delivery__label">Name
+              <input type="text" class="delivery__input" required minlength="4">
+            </label>
+            <label class="book-shop-header-two delivery__label">Surname
+              <input type="text" class="delivery__input" required minlength="5">
+            </label>
+            <label class="book-shop-header-two delivery__label-address">Delivery address
+              <input type="text" class="delivery__input" required minlength="5" placeholder="Street">
+              <input type="text" class="delivery__input" required placeholder="House number">
+              <input type="text" class="delivery__input" required placeholder="Flat number">
+            </label>
+            <label class="book-shop-header-two delivery__label-date">Delivery date
+              <input type="date" class="delivery__input" required>
+            </label>
+            <div class="book-shop-header-two delivery__payment-method">Choose a payment method for the goods
+              <label class="delivery__label-payment">
+                <input type="radio" id="paymentMethod" class="delivery__input" name="method" value="cash">
+                Cash
+              </label>
+              <label class="delivery__label-payment">
+                <input type="radio" id="paymentMethod" class="delivery__input" name="method" value="card">
+                Card
+              </label>
+            </div>
+            <div class="book-shop-header-two delivery__label">Choose 2 gifts
+              <label class="delivery__extra-gifts">
+                <input type="checkbox" id="niceGifts" class="delivery__input" name="gift" value="package">
+                Pack as a gift
+              </label>
+              <label class="delivery__extra-gifts">
+                <input type="checkbox" id="niceGifts" class="delivery__input" name="gift" value="postcard">
+                Add postcard
+              </label>
+              <label class="delivery__extra-gifts">
+                <input type="checkbox" id="niceGifts" class="delivery__input" name="gift" value="discount">
+                Provide 2% discount to the next time
+              </label>
+              <label class="delivery__extra-gifts">
+                <input type="checkbox" id="niceGifts" class="delivery__input" name="gift" value="merch">
+                Branded pen or pencil
+              </label>
+            </div>
+            <div class="delivery__button">
+              <input type="submit" class="book-shop-button delivery__button-complete" value="Complete" disabled>
+              <input type="reset" class="book-shop-button delivery__button-reset" value="Reset">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
