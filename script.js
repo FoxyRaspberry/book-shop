@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="book-bag__order-container">
             <div class="book-bag__order">
             </div>
+            <button class="book-shop-button book-bag__order-button">Confirm order</button>
           </div>
         </div>
       </section>
