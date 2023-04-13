@@ -66,4 +66,20 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(createCoverSection());
   document.body.appendChild(createCatalogSection());
   document.body.appendChild(createBookBagSection());
+
+  const cardsContainerElement = document.getElementsByClassName('catalog__book-card')[0];
+  function displayBooksCards(books, cardsContainerElement) {
+    books.forEach(book => {
+      const bookCardElement = createBookCard(book);
+      bookCardElement.addEventListener('click', (pointerEvent) => {
+        // Создаем информационную карточку книги и показываем попап с ней.
+        const bookPopupContent = createContent(book);
+        openPopup(bookPopupContent);
+      });
+      cardsContainerElement.appendChild(bookCardElement);
+    });
+  }
+  
+  const books = getBooks();
+  displayBooksCards(books, cardsContainerElement);
 });
