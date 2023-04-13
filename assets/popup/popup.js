@@ -1,15 +1,12 @@
-function createContent({imageLink, description}) {
+function createContent({title, description}) {
   const element = document.createElement('div');
-  element.classList.add('book-shop-popup__container');
+  element.classList.add('book-shop-popup');
   element.innerHTML = `
-    <div class="book-shop-popup__container">
     <div class="book-shop-title-container">
-      <h3 class="book-shop-header-three book-shop-popup__header-book-title">${imageLink}</h3>
-      <button class="book-shop-button-close">&times;</button>
+      <h3 class="book-shop-header-three book-shop-popup__header-book-title">${title}</h3>
     </div>
     <div class="book-shop-popup-description">
       <h5 class="book-shop-header-five book-shop-popup__header-book-abstract">${description}</h5>
-    </div>
     </div>
   `;
   return element;
@@ -23,7 +20,7 @@ function createPopup() {
   containerElement.classList.add('book-shop-popup__container');
 
   const closeElement = document.createElement('button');
-  closeElement.classList.add('book-shop-button-close');
+  closeElement.classList.add('book-shop-button-close', 'book-shop-popup__button-close');
   closeElement.innerHTML = '&times;';
 
   containerElement.appendChild(closeElement);
@@ -43,6 +40,7 @@ function createBlackout() {
 }
 
 function openPopup(contentElement) {
+  // switchBodyScrollable(false);
   const blackoutElement = createBlackout();
   document.body.appendChild(blackoutElement);
   const {
@@ -63,6 +61,7 @@ function openPopup(contentElement) {
 }
 
 function closePopup(blackoutElement, popupElement) {
+  // switchBodyScrollable(true);
   blackoutElement.remove();
   popupElement.remove();
 }
