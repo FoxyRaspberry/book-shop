@@ -9,19 +9,26 @@
 
 .book-card-basket__books-container {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  row-gap: 10px;
+}
+
+.book-card-basket__card {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
   border-radius: 10px;
-  padding: 0 15px;
+  padding: 10px 15px;
   background-color: #0C8C95;
 }
 
-.book-card-basket__books {
+.book-card-basket__book {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
-  padding: 10px 0;
 }
 
 .book-card-basket__book-name,
