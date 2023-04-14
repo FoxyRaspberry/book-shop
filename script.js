@@ -67,19 +67,29 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(createCatalogSection());
   document.body.appendChild(createBookBagSection());
 
-  const cardsContainerElement = document.getElementsByClassName('catalog__book-card')[0];
-  function displayBooksCards(books, cardsContainerElement) {
+  // Data.
+  const books = getBooks();
+
+  // Catalog.
+  function displayCatalogBooksCards(books, cardsContainerElement) {
     books.forEach(book => {
       const bookCardElement = createBookCard(book);
       bookCardElement.addEventListener('click', (pointerEvent) => {
-        // Создаем информационную карточку книги и показываем попап с ней.
-        const bookPopupContent = createContent(book);
-        openPopup(bookPopupContent);
+        if (pointerEvent.target.classList.contains('book-card__button-card')) {
+          // Создаем информационную карточку книги и показываем попап с ней.
+          const bookPopupContent = createContent(book);
+          openPopup(bookPopupContent);
+          return;
+        }
+
+        if (pointerEvent.target.classList.contains('book-card__button-add-bag')) {
+          // TODO: Add to the bag.
+        }
       });
       cardsContainerElement.appendChild(bookCardElement);
     });
   }
   
-  const books = getBooks();
-  displayBooksCards(books, cardsContainerElement);
+  const catalogCardsContainerElement = document.getElementsByClassName('catalog__book-card')[0];
+  displayCatalogBooksCards(books, catalogCardsContainerElement);
 });
