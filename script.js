@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Catalog.
   function displayCatalogBooksCards(books, cardsContainerElement) {
+    const cardsDocumentFragment = new DocumentFragment();
     books.forEach(book => {
       const bookCardElement = createBookCard(book);
       bookCardElement.addEventListener('click', (pointerEvent) => {
@@ -86,10 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
           // TODO: Add to the bag.
         }
       });
-      cardsContainerElement.appendChild(bookCardElement);
+      cardsDocumentFragment.appendChild(bookCardElement);
     });
+    cardsContainerElement.appendChild(cardsDocumentFragment);
   }
-  
+
   const catalogCardsContainerElement = document.getElementsByClassName('catalog__book-card')[0];
   displayCatalogBooksCards(books, catalogCardsContainerElement);
 });
