@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </header>
           <div class="book-bag__order-container">
             <div class="js-book-bag__order"></div>
-            <button class="book-shop-button book-bag__order-button">Confirm order</button>
+            <button class="book-shop-button book-bag__order-button" disabled>Confirm order</button>
           </div>
         </div>
       </section>
@@ -97,4 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Basket.
   const basketOrderElement = document.getElementsByClassName('js-book-bag__order')[0];
   const basketComponent = new BasketComponent(basketOrderElement);
+  const basketConfirmButtonElement = document.getElementsByClassName('book-bag__order-button')[0];
+  basketOrderElement.addEventListener('productsCountChanged', (productsCountChangedEvent) => {
+    if (productsCountChangedEvent.detail.count === 0) {
+      basketConfirmButtonElement.setAttribute('disabled', 'true');
+    }
+    else {
+      basketConfirmButtonElement.removeAttribute('disabled');
+    }
+  })
 });
