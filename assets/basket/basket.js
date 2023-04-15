@@ -9,8 +9,7 @@ class BasketComponent {
   // Public.
   addProduct(book) {
     this.appendCard(book);
-    this.totalPrice += book.price;
-    this.totalPriceElement.innerText = 'Total price: $ ' + this.totalPrice;
+    this.recalculateTotalPrice(book.price);
     this.dispatchEvent();
   }
 
@@ -25,8 +24,7 @@ class BasketComponent {
     const book = this.productsMap.get(cardElement);
     this.productsMap.delete(cardElement);
     cardElement.remove();
-    this.totalPrice -= book.price;
-    this.totalPriceElement.innerText = 'Total price: $ ' + this.totalPrice;
+    this.recalculateTotalPrice(-book.price);
     this.dispatchEvent();
   }
 
@@ -62,5 +60,10 @@ class BasketComponent {
     containerElement.appendChild(this.totalPriceElement);
 
     this.basketOrderElement.appendChild(containerElement);
+  }
+
+  recalculateTotalPrice(price) {
+    this.totalPrice += price;
+    this.totalPriceElement.innerText = 'Total price: $ ' + this.totalPrice;
   }
 }
