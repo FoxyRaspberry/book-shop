@@ -49,12 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
       <section class="book-bag__section">
         <div class="wrapper__section">
           <header class="book-bag__header-container">
-              <h2 class="book-shop-header-two book-bag__header-title">My book bag</h2>
-              <div class="book-bag__header-icon"></div>
+            <h2 class="book-shop-header-two book-bag__header-title">My book bag</h2>
+            <div class="book-bag__header-icon"></div>
           </header>
           <div class="book-bag__order-container">
-            <div class="book-bag__order">
-            </div>
+            <div class="js-book-bag__order"></div>
             <button class="book-shop-button book-bag__order-button">Confirm order</button>
           </div>
         </div>
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (pointerEvent.target.classList.contains('book-card__button-add-bag')) {
-          // TODO: Add to the bag.
+          basketComponent.addProduct(book);
         }
       });
       cardsDocumentFragment.appendChild(bookCardElement);
@@ -94,4 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const catalogCardsContainerElement = document.getElementsByClassName('catalog__book-card')[0];
   displayCatalogBooksCards(books, catalogCardsContainerElement);
+
+  // Basket.
+  const basketOrderElement = document.getElementsByClassName('js-book-bag__order')[0];
+  const basketComponent = new BasketComponent(basketOrderElement);
 });

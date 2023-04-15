@@ -1,0 +1,15 @@
+.book-shop-basket__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.book-shop-basket__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.book-shop-basket__total-price {
+
+}
