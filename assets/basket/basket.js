@@ -12,12 +12,23 @@ class BasketComponent {
     this.appendCard(book);
     this.totalPrice += book.price;
     this.totalPriceElement.innerText = 'Total price: $ ' + this.totalPrice;
+    this.dispatchEvent();
   }
 
   // Private.
   appendCard(book) {
     const card = createBasketBookCard(book);
     this.listElement.appendChild(card);
+  }
+
+  // Создать пользовательское событие с данными о текущем количестве товаров.
+  dispatchEvent() {
+    const productsCountChangedEvent = new CustomEvent('productsCountChanged', {
+      detail: {
+        count: this.list.length,
+      },
+    });
+    this.basketOrderElement.dispatchEvent(productsCountChangedEvent);
   }
 
   // Первоначальная подготовка визуального представления.
