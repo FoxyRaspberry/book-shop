@@ -106,4 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       basketConfirmButtonElement.removeAttribute('disabled');
     }
   })
+  basketConfirmButtonElement.addEventListener('click', () => {
+    window.open("assets/delivery-form/form.html", "_blank");
+  });
 });
