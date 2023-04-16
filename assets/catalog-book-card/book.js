@@ -1,6 +1,8 @@
-function createBookCard({ imageLink, author, price }) {
+function createBookCard({ imageLink, author, id, price }) {
   const element = document.createElement('div');
   element.classList.add('book-card__book-card');
+  element.setAttribute('draggable', true);
+  element.setAttribute('data-id', id);
   element.innerHTML = `
     <div class="book-card__book-container-img">
       <img class="book-card__book-card-photo" alt="" src="${imageLink}">

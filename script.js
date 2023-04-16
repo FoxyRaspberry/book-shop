@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Data.
   const books = getBooks();
+  const booksMap = new Map(books.map(book => [book.id, book]));
 
   // Catalog.
   function displayCatalogBooksCards(books, cardsContainerElement) {
@@ -105,8 +106,29 @@ document.addEventListener('DOMContentLoaded', () => {
     else {
       basketConfirmButtonElement.removeAttribute('disabled');
     }
-  })
+  });
   basketConfirmButtonElement.addEventListener('click', () => {
-    window.open("assets/delivery-form/form.html", "_blank");
+    window.open('assets/delivery-form/form.html', '_blank');
+  });
+
+  // Drag'n'Drop.
+  catalogCardsContainerElement.addEventListener('dragstart', (dragEvent) => {
+    const bookCardElement = dragEvent.target.closest('.book-card__book-card');
+    if (!bookCardElement) return;
+
+    dragEvent.dataTransfer.setData('text/plain', bookCardElement.dataset.id);
+    dragEvent.dataTransfer.effectAllowed = 'link';
+  });
+
+  const basketSectionElement = document.getElementsByClassName('book-bag__section')[0];
+  basketSectionElement.addEventListener('dragover', (dragEvent) => {
+    dragEvent.preventDefault();
+    dragEvent.dataTransfer.dropEffect = 'link';
+  });
+  basketSectionElement.addEventListener('drop', (dragEvent) => {
+    dragEvent.preventDefault();
+    const productID = +dragEvent.dataTransfer.getData('text/plain');
+    const product = booksMap.get(productID);
+    basketComponent.addProduct(product);
   });
 });
