@@ -21,4 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  const deliveryCompleteButtonElement = document.getElementsByClassName('delivery__button-complete')[0];
+
+  formElement.addEventListener('change', (event) => {
+    formElement.reportValidity();
+    if (!formElement.checkValidity()) {
+      deliveryCompleteButtonElement.setAttribute('disabled', 'true');
+    }
+    else {
+      deliveryCompleteButtonElement.removeAttribute('disabled');
+    }
+  });
+  formElement.addEventListener('submit', (submitEvent) => {
+    submitEvent.preventDefault();
+  });
 });
