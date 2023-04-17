@@ -85,3 +85,8 @@
   border: 2px solid #608fdbac;
   color: var(--color-five);
 }
+
+.delivery__input-date--touched:invalid,
+.delivery__input-text--touched:invalid {
+  border: 3px solid red;
+}
