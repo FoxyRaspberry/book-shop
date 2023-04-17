@@ -1,0 +1,18 @@
+.book-shop-basket__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.book-shop-basket__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.book-shop-basket__total-price {
+  font-size: 20px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--color-five);
+}

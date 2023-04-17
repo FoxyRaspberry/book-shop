@@ -1,0 +1,38 @@
+.book-card-basket__section {
+  padding-top: 20px;
+}
+
+.wrapper__section {
+  width: 1200px;
+  margin: auto;
+}
+
+.book-card-basket__books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  row-gap: 10px;
+}
+
+.book-card-basket__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #0C8C95;
+}
+
+.book-card-basket__book {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.book-card-basket__book-name,
+.book-card-basket__book-author,
+.book-card-basket__book-price {
+  color: var(--color-three);
+}

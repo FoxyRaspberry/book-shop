@@ -8,13 +8,15 @@
 }
 
 .book-card__cards-container {
-  background: #D04B51;
   border-radius: 10px;
   width: 360px;
+  height: 368px;
 }
 
 .book-card__book-card {
-  box-shadow: -10px -10px 15px rgba(166, 25, 31, 0.32);
+  width: 360px;
+  height: 368px;
+  background-color: #D04B51;
   border-radius: 10px;
 }
 
