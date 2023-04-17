@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   basketConfirmButtonElement.addEventListener('click', () => {
-    window.open('assets/delivery-form/form.html', '_blank');
+    window.open('delivery-form', '_blank');
   });
 
   // Drag'n'Drop.

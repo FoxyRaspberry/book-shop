@@ -8,8 +8,8 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Gelasio&display=swap" rel="stylesheet">
-  <link href="../reset.css" rel="stylesheet">
-  <link href="../ui-kit/ui-kit.css" rel="stylesheet">
+  <link href="../assets/reset.css" rel="stylesheet">
+  <link href="../assets/ui-kit/ui-kit.css" rel="stylesheet">
   <link href="form.css" rel="stylesheet">
   <script src="form.js"></script>
 </head>
@@ -21,38 +21,28 @@
           <h2 class="book-shop-header-two delivery__header">Making an order</h2>
         </div>
         <div class="delivery__form-wrapper">
-          <div class="book-shop-header-two delivery__selected-products">My choice
-            <div class="delivery__product-details">
-              <div class="delivery__product-title">
-                <div class="book-shop-header-three delivery__product">Programming JavaScript Applications</div>
-              </div>
-              <div class="delivery__product-price">
-                <div class="book-shop-header-five delivery__product">Price: 19</div>
-              </div>
-            </div>
-          </div>
           <form class="delivery__form">
             <label class="book-shop-header-two delivery__label">Name
-              <input type="text" class="delivery__input" required minlength="4">
+              <input type="text" name="customerName" class="delivery__input" required minlength="4" pattern="^[A-Za-z]+$">
             </label>
             <label class="book-shop-header-two delivery__label">Surname
-              <input type="text" class="delivery__input" required minlength="5">
+              <input type="text" name="customerSurname" class="delivery__input" required minlength="5" pattern="^[A-Za-z]+$">
             </label>
             <label class="book-shop-header-two delivery__label-address">Delivery address
-              <input type="text" class="delivery__input" required minlength="5" placeholder="Street">
-              <input type="text" class="delivery__input" required placeholder="House number">
-              <input type="text" class="delivery__input" required placeholder="Flat number">
+              <input type="text" name="addressStreet" class="delivery__input" required minlength="5" placeholder="Street">
+              <input type="text" name="addressHouseNumber" class="delivery__input" required pattern="^[\d]+$" placeholder="House number">
+              <input type="text" name="addressFlatNumber" class="delivery__input" required pattern="^[\d]+[\-]?[\d]*$" placeholder="Flat number">
             </label>
             <label class="book-shop-header-two delivery__label-date">Delivery date
-              <input type="date" class="delivery__input" required>
+              <input type="date" class="delivery__input delivery__date" required>
             </label>
             <div class="book-shop-header-two delivery__payment-method">Choose a payment method for the goods
               <label class="delivery__label-payment">
-                <input type="radio" id="paymentMethod" class="delivery__input" name="method" value="cash">
+                <input type="radio" id="paymentMethod" class="delivery__input" name="method" required value="cash">
                 Cash
               </label>
               <label class="delivery__label-payment">
-                <input type="radio" id="paymentMethod" class="delivery__input" name="method" value="card">
+                <input type="radio" id="paymentMethod" class="delivery__input" name="method" required value="card">
                 Card
               </label>
             </div>

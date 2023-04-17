@@ -17,15 +17,6 @@
   gap: 25px;
 }
 
-.delivery__product-details {
-  background: var(--color-three);
-  border-radius: 5px;
-}
-
-.delivery__product {
-  color: var(--color-five);
-}
-
 .delivery__header {
   color: var(--color-three);
 }
@@ -47,8 +38,7 @@
 .delivery__label,
 .delivery__label-address,
 .delivery__label-date,
-.delivery__payment-method,
-.delivery__selected-products {
+.delivery__payment-method {
   display: flex;
   flex-direction: column;
   font-size: 25px;
@@ -94,4 +84,9 @@
   background-color: var(--color-three);
   border: 2px solid #608fdbac;
   color: var(--color-five);
+}
+
+.delivery__input-date--touched:invalid,
+.delivery__input-text--touched:invalid {
+  border: 3px solid red;
 }
