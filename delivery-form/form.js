@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${tomorrow.getFullYear()}-${tomorrowMonthString}-${tomorrowDateString}`;
   }
 
+  function getSummary() {
+    const customer = formElement.customerName.value + ' ' + formElement.customerSurname.value;
+    const address = formElement.addressStreet.value + ' ' + formElement.addressHouseNumber.value + ' ' + formElement.addressFlatNumber.value;
+    return `Congratulations! Order created!
+    Customer: ${customer}
+    Delivery address: ${address}`;
+  }
+
   const deliveryDateElement = document.getElementsByClassName('delivery__date')[0];
   deliveryDateElement.setAttribute('min', getMinDeliveryDate());
 
@@ -35,5 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   formElement.addEventListener('submit', (submitEvent) => {
     submitEvent.preventDefault();
+    alert(getSummary());
   });
 });

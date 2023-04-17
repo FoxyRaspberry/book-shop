@@ -23,15 +23,15 @@
         <div class="delivery__form-wrapper">
           <form class="delivery__form">
             <label class="book-shop-header-two delivery__label">Name
-              <input type="text" class="delivery__input" required minlength="4" pattern="^[A-Za-z]+$">
+              <input type="text" name="customerName" class="delivery__input" required minlength="4" pattern="^[A-Za-z]+$">
             </label>
             <label class="book-shop-header-two delivery__label">Surname
-              <input type="text" class="delivery__input" required minlength="5" pattern="^[A-Za-z]+$">
+              <input type="text" name="customerSurname" class="delivery__input" required minlength="5" pattern="^[A-Za-z]+$">
             </label>
             <label class="book-shop-header-two delivery__label-address">Delivery address
-              <input type="text" class="delivery__input" required minlength="5" placeholder="Street">
-              <input type="text" class="delivery__input" required pattern="^[\d]+$" placeholder="House number">
-              <input type="text" class="delivery__input" required pattern="^[\d]+[\-]?[\d]*$" placeholder="Flat number">
+              <input type="text" name="addressStreet" class="delivery__input" required minlength="5" placeholder="Street">
+              <input type="text" name="addressHouseNumber" class="delivery__input" required pattern="^[\d]+$" placeholder="House number">
+              <input type="text" name="addressFlatNumber" class="delivery__input" required pattern="^[\d]+[\-]?[\d]*$" placeholder="Flat number">
             </label>
             <label class="book-shop-header-two delivery__label-date">Delivery date
               <input type="date" class="delivery__input delivery__date" required>
